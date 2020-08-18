@@ -1,0 +1,33 @@
+{
+  "name": "extas/players-groups",
+  "export": {
+    "players_groups": [
+      {
+        "name": "public",
+        "title": "Public",
+        "description": "Public",
+        "aliases": ["public", "guest"]
+      },
+      {
+        "name": "authorized",
+        "title": "Authorized",
+        "description": "Authorized users",
+        "aliases": ["authorized", "public", "guest"]
+      },
+      {
+        "name": "admin",
+        "title": "Admin",
+        "description": "Admin",
+        "aliases": ["admin", "authorized", "public", "guest"]
+      }
+    ]
+  },
+  "extensions": [
+    {
+      "class": "extas\\components\\extensions\\ExtensionPlayerGroup",
+      "interface": "extas\\interfaces\\extensions\\IExtensionPlayerGroup",
+      "subject": "extas.player",
+      "methods": ["isGroup", "__toGroup"]
+    }
+  ]
+}

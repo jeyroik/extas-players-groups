@@ -6,19 +6,73 @@
         "name": "public",
         "title": "Public",
         "description": "Public",
-        "aliases": ["public", "guest"]
+        "aliases": ["public", "guest"],
+        "parameters": {
+          "creator_name": {
+            "name": "creator_name",
+            "value": "system"
+          },
+          "created_at": {
+            "name": "created_at",
+            "value": "@timestamp"
+          },
+          "members_count": {
+            "name": "members_count",
+            "value": 0
+          },
+          "is_private": {
+            "name": "is_private",
+            "value": false
+          }
+        }
       },
       {
         "name": "authorized",
         "title": "Authorized",
         "description": "Authorized users",
-        "aliases": ["authorized", "public", "guest"]
+        "aliases": ["authorized", "public", "guest"],
+        "parameters": {
+          "creator_name": {
+            "name": "creator_name",
+            "value": "system"
+          },
+          "created_at": {
+            "name": "created_at",
+            "value": "@timestamp"
+          },
+          "members_count": {
+            "name": "members_count",
+            "value": 0
+          },
+          "is_private": {
+            "name": "is_private",
+            "value": false
+          }
+        }
       },
       {
         "name": "admin",
         "title": "Admin",
         "description": "Admin",
-        "aliases": ["admin", "authorized", "public", "guest"]
+        "aliases": ["admin", "authorized", "public", "guest"],
+        "parameters": {
+          "creator_name": {
+            "name": "creator_name",
+            "value": "system"
+          },
+          "created_at": {
+            "name": "created_at",
+            "value": "@timestamp"
+          },
+          "members_count": {
+            "name": "members_count",
+            "value": 0
+          },
+          "is_private": {
+            "name": "is_private",
+            "value": true
+          }
+        }
       }
     ]
   },

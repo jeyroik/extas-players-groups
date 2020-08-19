@@ -58,6 +58,15 @@ class GroupTest extends TestCase
         $this->assertEquals(3, $group->getMembersCount());
 
         $this->assertTrue($group->isValid());
+
+        $group->setCreatorName('test2');
+        $this->assertEquals('test2', $group->getCreatorName());
+
+        $group->setCreatedAt(2);
+        $this->assertEquals(2, $group->getCreatedAt());
+
+        $group->setPrivate(false);
+        $this->assertFalse($group->isPrivate());
     }
 
     public function testExtension()
